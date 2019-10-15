@@ -1,0 +1,183 @@
+{% extends "layout_bsa.html" %}
+{% block page_title %}
+Pay or challenge a Penalty Charge Notice
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+   <p>
+      <a href="index"> Back to all prototypes</a>
+   </p>
+   <div class="heading-group">
+      <p>Pay by Direct Debit Prototype</p>
+      <h1 class="heading-xlarge">
+         Direct Debits Journeys
+      </h1>
+   </div>
+   <div class="panel panel-border-narrow">
+      <p style="color: red;">Don't use any of this prototype code on production services, it doesn't adhere to development standards and is hacked together quickly and roughly.</p>
+   </div>
+   <table id="review-table-one" class="check-table">
+      <thead>
+         <tr>
+            <th>
+               <h2 class="heading-medium">August 2019</h2>
+            </th>
+            <th></th>
+            <th class="right" style="padding-right:0px;"></th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <ul class="list list-bullet">
+                  <li>
+                     <a href="breakdown/dd/start">Full successful journey</a>
+                  </li>
+                  <ul class="list list-bullet">
+                     <li>PCN charge: £126.40</li>
+                     <li>Duration: 12 months</li>
+                     <li>Payment date: 28</li>
+                  </ul>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+
+   <table id="review-table-one" class="check-table">
+      <thead>
+         <tr>
+            <th>
+               <h2 class="heading-medium">February 2019</h2>
+            </th>
+            <th></th>
+            <th class="right" style="padding-right:0px;"></th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <ul class="list list-bullet">
+                  <li><a href="payments/dd_v2_test/start">Full journey - V. 3 (DECS, Band 3) w/bank validation error</a></li>
+                  <br>
+                  <p>DD Guidance</p>
+                     <ul class="list list-bullet">
+                        <li><a href="payments/dd_v2_test/plan-info2">User does not check 'payment failure' box</a></li>
+                        <li><a href="payments/dd_v2_test/plan-info3">User checks one 'account' box</a></li>
+                     </ul>
+                  <p>Validation</p>
+                     <ul class="list list-bullet">
+                        <li><a href="payments/dd_v2_test/bankDetails2">Bank details and KYC failure</a></li>
+                     </ul>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br>
+<table id="review-table-one" class="check-table">
+      <thead>
+         <tr>
+            <th>
+               <h2 class="heading-medium">January 2019</h2>
+            </th>
+            <th></th>
+            <th class="right" style="padding-right:0px;"></th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <ul class="list list-bullet">
+                  <li><a href="payments/dd_v2/start">Full journey - V. 3</a></li>
+                     <ul class="list list-bullet">
+                        <li><a href="payments/dd_decs/start">Full journey - V. 3 (DECS, Band 3)</a></li>
+                     </ul>
+                  <li><a href="public/images/prototypes/dd/dd_journey_v2.pdf">Full journey - V. 2 (PDF)</a></li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p style="font-weight: 700;">Secure PCN ref. verification</p>
+               <ul class="list list-bullet">
+                  <li><a href="payments/dd_v2/pcnVerifV1">V.1 - Input PCN ref. twice on the same screen</a></li>
+                  <li><a href="payments/dd_v2/pcnVerifV2_1">V.2 - Re-enter PCN ref. on next screen</a></li>
+                  <li><a href="payments/dd_v2/pcnVerifV3_1">V.3 - Re-enter PCN ref. at end of verification process (4 screens)</a></li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p style="font-weight: 700;">Direct Debit - Check your answers</p>
+               <ul class="list list-bullet">
+                  <li><a href="payments/dd_v2/summaryV2">Alternate version - condensed payment schedule</a></li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p style="font-weight: 700;">Direct Debit options breakdown</p>
+               <ul class="list list-bullet">
+                  <li><a href="payments/dd_v2/optionsTable">Payment breakdown - full</a></li>
+                  <li><a href="payments/dd_v2/optionsTable2">Payment breakdown - condensed</a></li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p style="font-weight: 700;">Direct Debits guidance page</p>
+               <ul class="list list-bullet">
+                  <li><a href="payments/dd_v2/planInfoV3">V.2 - One checkbox with error message (2 screens)</a></li>
+                  <li><a href="payments/dd_v2/planInfoError">Error styling (3 checkboxes)</a></li>
+                  <li><a href="payments/dd_v2/confirmKickout">Kickout page (v.1 content)</a></li>
+                  <li><a href="payments/dd_v2/optionsKickout">Kickout page (v.2 content)</a></li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p style="font-weight: 700;">PCN views</p>
+               <ul class="list list-bullet">
+                  <li><a href="payments/dd_v2/pcnPagePaid">Penalty Charge paid in full</a></li>
+                  <li><a href="payments/dd_v2/pcnPagePartialPaid">Penalty Charge partially paid (one-off payment received)</a></li>
+                  <li><a href="payments/dd_v2/pcnPageDD">Direct Debit successfully set up</a></li>
+                  <li><a href="payments/dd_v2/pcnPageDefault1">User has defaulted</a></li>
+                  <!--<li><a href="payments/dd_v2/pcnPageDefault1">User defaulted 1 time</a></li>
+                  <li><a href="payments/dd_v2/pcnPageDefault1">User defaulted 1 time</a></li> -->
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br>
+   <table id="review-table-one" class="check-table">
+      <thead>
+         <tr>
+            <th>
+               <h2 class="heading-medium">December 2018</h2>
+            </th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <ul class="list list-bullet">
+                  <li><a href="payments/dd/start">Full journey - V. 1</a></li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <p style="font-weight: 700;">Check Your Answers pages</p>
+               <ul class="list list-bullet">
+                  <li><a href="payments/dd/checkYourAnswersPcn">Check Your Answers</a></li>
+                  <li><a href="payments/dd/checkYourAnswersPcnUnverified">Answers not verified</a></li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br>
+</main>
+{% endblock %}

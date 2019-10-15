@@ -1,0 +1,866 @@
+{% extends "layout_bsa.html" %}
+{% block page_title %}
+Pay or challenge a Penalty Charge Notice
+{% endblock %}
+{% block content %}
+<!-- bsa table style overrides -->
+<style>
+   table tr td {
+   border: none;
+   display: table-cell;
+   vertical-align: text-top;
+   padding: 2rem 3rem 0 0;
+   }
+   table tr td:nth-child(1) {
+   width: 30%;
+   }
+   table tr td:nth-child(2) {
+   padding-right: 3rem;
+   width: 30%; 
+   }
+   table tr td:nth-child(3) {
+   padding-right: 3rem;
+   }
+</style>
+<main id="content" role="main">
+   <p>
+      <a href="index"> Back to all prototypes</a>
+   </p>
+   <div class="heading-group">
+      <p>Pay by Direct Debit Prototype</p>
+      <h1 class="heading-xlarge">
+         Page by page breakdown
+      </h1>
+   </div>
+   <div class="panel panel-border-narrow">
+      <p style="color: red;">Don't use any of this prototype code on production services, it doesn't adhere to development standards and is hacked together quickly and roughly.</p>
+   </div>
+
+
+<!-- Errors -->
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="viewPages">Errors</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="/public/images/prototypes/dd/timeout-page.png">Application timeout window</a>
+            </td>
+            <td>Your application will time out soon</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-3047">PA233-3047</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/timeout">Application has timed out</a>
+            </td>
+            <td>You'll need to start again</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-3047">PA233-3047</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br>
+
+<!-- Start and verification pages -->
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="viewPages">Start and verification pages</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="breakdown/dd/start">Start</a>
+            </td>
+            <td>Pay or Challenge a Penalty Charge Notice</td>
+            <td>/start</td>
+            <td class="right">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/enterPcnNumber">Enter PCN number</a>
+            </td>
+            <td>What is your Penalty Charge Notice reference number?</td>
+            <td>/enter-pcn-number</td>
+            <td class="right">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnVerif">Re-enter PCN number</a>
+            </td>
+            <td>Enter your Penalty Charge Notice reference number again</td>
+            <td>/re-enter-pcn-number</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-2058">PA233-2058</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnVerifError">Re-enter PCN number (validation error)</a>
+            </td>
+            <td>Enter your Penalty Charge Notice reference number again</td>
+            <td>/re-enter-pcn-number</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-2058">PA233-2058</a>
+            </td>
+         </tr>
+         <!-- <tr>
+            <td>
+               <a href="breakdown/dd/failedPcnMatch">Failed PCN number verification</a>
+            </td>
+            <td>The Penalty Charge reference numbers you entered did not match</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1965">PA233-1965</a>
+            </td>
+         </tr> -->
+         <tr>
+            <td>
+               <a href="breakdown/dd/validateDob">Verify date of birth</a>
+            </td>
+            <td>What is your date of birth?</td>
+            <td>/date-of-birth</td>
+            <td class="right">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/validateCharge">Verify PCN total amount</a>
+            </td>
+            <td>Enter the total amount on your Penalty Charge Notice</td>
+            <td>/pcn-total-amount</td>
+            <td class="right">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/nextGo">Check your answers</a>
+            </td>    
+            <td>Check answers - unable to confirm identity</td>
+            <td>/unable-to-confirm-identity</td>
+            <td class="right">
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br>
+
+<!-- PCN view pages -->
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="viewPages">Penalty view pages</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnPage">Penalty view (PECS 3 items)</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1984">PA233-1984</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnPageDecs">Penalty view (DECS Band 3)</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1984">PA233-1984</a>
+            </td>
+         </tr>
+         
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnPageDDInactive">Penalty view (DD inactive - default 1)</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1469">PA233-1469</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnPageDDInactive2">Penalty view (DD inactive - default 2)</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1469">PA233-1469</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnPageDefaulted">Penalty view (DD inactive - default 3)</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-2337">PA233-2337</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnPageDDPending">Penalty view (DD pending)</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1469">PA233-1469</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnPageDDSetup">Penalty view (DD active)</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1469">PA233-1469</a>
+            </td>
+         </tr>
+         
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnPageDDRejected">Penalty view (DD rejected)</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-2366">PA233-2366</a>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <a href="breakdown/dd/pcnPageFailedKyc">Penalty view (failed KYC)</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+               <!-- <a href="https://bsa2468.atlassian.net/browse/PA233-2366">PA233-2366</a> -->
+            </td>
+         </tr>
+         
+         
+      </tbody>
+   </table>
+   <br>
+
+<!-- DD pages -->
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="didPage">Direct Debit pages</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="breakdown/dd/paymentOptions">Payment options</a>
+            </td>
+            <td>How would you like to pay your Penalty Charge?</td>
+            <td>/payment-options</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1985">PA233-1985</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/planInfo">Direct Debit rules</a>
+            </td>
+            <td>Paying by Direct Debit</td>
+            <td>/paying-by-direct-debit</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1986">PA233-1986</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/ddError">Direct Debit rules - kickout page</a>
+            </td>
+            <td>You cannot set up a Direct Debit online</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-2029">PA233-2029</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/planInfoError">Direct Debit rules<br>(error - all)</a>
+            </td>
+            <td>Paying by Direct Debit</td>
+            <td>/paying-by-direct-debit</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1986">PA233-1986</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/planInfoErrorCheck">Direct Debit rules <br>(error - one)</a>
+            </td>
+            <td>Paying by Direct Debit</td>
+            <td>/paying-by-direct-debit</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1986">PA233-1986</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/options1">Direct Debit duration options<br>(3 months)</a>
+            </td>
+            <td>Select how many months you want to pay over</td>
+            <td>/direct-debit-duration</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1987">PA233-1987</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/options2">Direct Debit duration options<br>(3 and 6 months)</a>
+            </td>
+            <td>Select how many months you want to pay over</td>
+            <td>/direct-debit-duration</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1987">PA233-1987</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/options3">Direct Debit duration options<br>(3, 6 and 12 months)</a>
+            </td>
+            <td>Select how many months you want to pay over</td>
+            <td>/direct-debit-duration</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1987">PA233-1987</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/dates">Direct Debit date</a>
+            </td>
+            <td>Which date would you like payments to be taken each month?</td>
+            <td>/payment-date</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1988">PA233-1988</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br>
+
+<!-- Kickout pages
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="enterPage">Kickout pages</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/confirmKickout">Can't setup DD and need to contact CCS agent (v.1 content)</a>
+            </td>
+            <td>You will need to call us</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1986">PA233-1986</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/optionsKickout">Can't setup DD and need to contact CCS agent (v.2 content)</a>
+            </td>
+            <td>You cannot complete your Direct Debit application online</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1986">PA233-1986</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+  
+   <br>  -->
+
+<!-- Address pages -->
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="enterPage">Address pages</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="breakdown/dd/queryAddress">Confirm we hold the correct address</a>
+            </td>
+            <td>Is this your address?</td>
+            <td>/check-address</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1990">PA233-1990</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/manualAddress">Enter address manually</a>
+            </td>
+            <td>What is your address?</td>
+            <td>/update-address</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1992">PA233-1992</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br>
+
+<!-- Summary / Check your answers -->
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="enterPage">Summary / Check your answers</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="breakdown/dd/summary3mth">Check your answers<br>(3 months)</a>
+            </td>
+            <td>Check your answers</td>
+            <td>/check-direct-debit-details</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1997">PA233-1997</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/summary6mth">Check your answers<br>(6 months)</a>
+            </td>
+            <td>Check your answers</td>
+            <td>/check-direct-debit-details</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1997">PA233-1997</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/summary12mth">Check your answers<br>(12 months)</a>
+            </td>
+            <td>Check your answers</td>
+            <td>/check-direct-debit-details</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1997">PA233-1997</a>
+            </td>
+         </tr>
+         
+      </tbody>
+   </table>
+   <br>  
+
+<!-- Payment / Bank Details  -->
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="enterPage">Payment and KYC</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="breakdown/dd/bankDetails">Enter bank details</a>
+            </td>
+            <td>Enter bank details</td>
+            <td>/enter-bank-details</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1989">PA233-1989</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/bankDetailsError">Enter bank details <br>(Account no. and SC error)</a>
+            </td>
+            <td>Enter bank details</td>
+            <td>/enter-bank-details</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-2003">PA233-2003</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/bankDetailsErrorName">Enter bank details <br>(Name error)</a>
+            </td>
+            <td>Enter bank details</td>
+            <td>/enter-bank-details</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1989">PA233-1989</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/failedKycPecs">Failed KYC check (PECS)</a>
+            </td>
+            <td>You will need to call us</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-2003">PA233-2003</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/failedKycDecs">Failed KYC check (DECS)</a>
+            </td>
+            <td>You will need to call us</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-2003">PA233-2003</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br>
+
+<!-- Confirm page -->
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="enterPage">Confirm page</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="breakdown/dd/confirm">Confirm and submit</a>
+            </td>
+            <td>Confirm and submit</td>
+            <td>/confirm-submit</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-2071">PA233-2071</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/unavBack">Page unavailable (user clicks back on Confirm page)</a>
+            </td>
+            <td>This page is no longer available</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-2071">PA233-2071</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br>
+
+<!-- End page -->
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="enterPage">End page</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="breakdown/dd/end">Direct Debit has been set up</a>
+            </td>
+            <td>You have set up a Direct Debit to pay your penalty charge</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1999">PA233-1999</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="breakdown/dd/unavBackEnd">Page unavailable (user clicks back on End page)</a>
+            </td>
+            <td>This page is no longer available</td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1999">PA233-1999</a>
+            </td>
+         </tr>
+      </tbody>
+   </table> 
+   <br>
+
+<!-- Experimental pages -->
+<!-- <br>
+<h1 class="heading-large">Experimental pages</h1>
+   <p style="color: red;">There is ongoing discussion regarding these pages. They have not been signed off.</p> -->
+
+<!-- Secure PCN verification -->
+<!--    <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="viewPages">Secure PCN verification</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/checkYourAnswersPcn">Check your answers</a>
+            </td>
+            <td>Check your answers</td>
+            <td>/check-your-answers</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1965">PA233-1965</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/checkYourAnswersPcnUnverified">Check your answers (unverified)</a>
+            </td>
+            <td>Check your answers</td>
+            <td>/check-your-answers</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1965">PA233-1965</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/pcnVerifV1">Input PCN ref. twice on the same screen</a>
+            </td>
+            <td>What is your Penalty Charge Notice reference number?</td>
+            <td>/enter-pcn-number</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1965">PA233-1965</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="payments/dd_v2//pcnVerifV2_1">Re-enter PCN ref. on next screen</a>
+            </td>
+            <td>What is your Penalty Charge Notice reference number?</td>
+            <td>/enter-pcn-number</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1965">PA233-1965</a>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/pcnVerifV3_1">Re-enter PCN ref. at end of verification process (4 screens)</a>
+            </td>
+            <td>What is your Penalty Charge Notice reference number?</td>
+            <td>/enter-pcn-number</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1965">PA233-1965</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br> -->
+
+<!-- Disruption page -->
+<!--    <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="viewPages">What happens next?</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="/contentImprov/success/infoPage2">What happens next? (disruption page)</a>
+            </td>
+            <td></td>
+            <td></td>
+            <td class="right"> -->
+               <!-- <a href="https://bsa2468.atlassian.net/browse/PA233-1986">PA233-1986</a> -->
+<!--             </td>
+         </tr>
+      </tbody>
+   </table>
+   <br> -->
+
+<!-- DD Rules -->
+<!--    <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="viewPages">Direct Debit pages</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/planInfoV3">Direct Debit rules (one checkbox)</a>
+            </td>
+            <td>Paying by Direct Debit</td>
+            <td>/paying-by-direct-debit</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1986">PA233-1986</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br> -->
+
+<!-- Summary / Check your answers -->
+<!--    <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="viewPages">Summary / Check your answers</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="payments/dd_v2_test/summary6V2">Check your answers - v. 3</a>
+            </td>
+            <td>Check your answers</td>
+            <td>/check-direct-debit-details</td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1997">PA233-1997</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br> -->
+
+<!--- End page -->
+<!--    <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="viewPages">End pages</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/endV2">End page with numbered points</a>
+            </td>
+            <td></td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1999">PA233-1999</a>
+            </td>
+         </tr> -->
+         <!-- <tr>
+            <td>
+               <a href="contentImprov/success/exemFoundv2">End page - updated content and blue panel</a>
+            </td>
+            <td></td>
+            <td></td>
+            <td class="right">
+               <a href="https://bsa2468.atlassian.net/browse/PA233-1999">PA233-1999</a>
+            </td>
+         </tr> -->
+<!--       </tbody>
+   </table>
+   <br> -->
+
+<!-- PCN return journey pages
+   <table class="check-table" id="review-table-one">
+      <thead>
+         <tr>
+            <th id="viewPages">Penalty view return journey pages</th>
+            <th>Page Title</th>
+            <th>URL</th>
+            <th class="right" style="padding-right:0px;">JIRA ticket number</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/pcnPagePaid">Penalty Charge paid in full</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/pcnPagePartialPaid">Penalty Charge partially paid (one-off payment received)</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/pcnPageDD">Direct Debit successfully set up</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <a href="payments/dd_v2/pcnPageDefault1">User has defaulted</a>
+            </td>
+            <td>Penalty Charge Notice details</td>
+            <td>/view-your-pcn</td>
+            <td class="right">
+            </td>
+         </tr>
+      </tbody>
+
+   </table>
+    -->
+   <!-- <br> -->
+
+</main>
+{% endblock %}

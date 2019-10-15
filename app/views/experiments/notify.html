@@ -1,0 +1,97 @@
+{% extends "layout_bsa.html" %}
+{% block page_title %}
+Pay or challenge a Penalty Charge Notice
+{% endblock %}
+{% block content %}
+
+<style>
+   table tr td {
+   border: none;
+   display: table-cell;
+   vertical-align: text-top;
+   padding: 2rem 3rem 0 0;
+   }
+   table tr td:nth-child(1) {
+   width: 30%;
+   }
+   table tr td:nth-child(2) {
+   padding-right: 3rem;
+   width: 30%; 
+   }
+   table tr td:nth-child(3) {
+   padding-right: 3rem;
+   }
+</style>
+
+<main id="content" role="main">
+   <p>
+      <a href="index"> Back to all prototypes</a>
+   </p>
+   <div class="heading-group">
+      <p>Pay or Challenge Prototype</p>
+      <h1 class="heading-xlarge">Gov Notify</h1>
+      <h2 class="heading-medium" style="margin-top: 20px;">Changes to current pages - Notify app not yet set up</h2>
+   </div>
+   <div class="panel panel-border-narrow">
+      <p style="color: red;">Don't use any of this prototype code on production services, it doesn't adhere to development standards and is hacked together quickly and roughly. There is ongoing discussion regarding these pages/journeys. They have not been signed off.</p>
+   </div>
+   <table id="review-table-one" class="check-table">
+      <thead>
+         <tr>
+            <th>Scenario / Page</th>
+            <th>Changes</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td><a href="notify/paidFull">Success - full payment</a></td>
+            <td>Info in grey highlight box with 'Send me an email confirmation' link</td>
+         </tr>
+         <tr>
+            <td><a href="notify/paidPartially">Success - partial payment</a></td>
+            <td>Info in grey highlight box with 'Send me an email confirmation' link</td>
+         </tr>
+         <tr>
+            <td><a href="notify/ddSetup">Success - Direct Debit set up</a></td>
+            <td>'Send me an email confirmation' link under blue panel</td>
+         </tr>
+         <tr>
+            <td><a href="notify/onHold">Record on hold for 2 days (Case sent for review)</a></td>
+            <td>Info in grey highlight box with 'Send me an email confirmation' link</td>
+         </tr>
+         <!-- <tr>
+            <td><a href="notify/#">Record on hold for 60 days (need to provide proof of benefits)</a></td>
+            <td></td>
+         </tr>
+         <tr>
+            <td><a href="notify/#">We will contact you - Record on hold (found not matched)</a></td>
+            <td></td>
+         </tr>
+         <tr>
+            <td><a href="notify/#">confirm users payment was unsuccessful?</a></td>
+            <td></td>
+         </tr>
+         <tr>
+            <td><a href="notify/#">We will contact you - Record on hold (found not matched)</a></td>
+            <td></td>
+         </tr> -->
+         <tr> 
+            <td><a href="notify/found">Exemption found and matched - PCN closed [V.1]</a></td>
+            <td>Info in grey highlight box with 'Send me an email confirmation' link</td>
+         </tr>
+         <tr> 
+            <td><a href="notify/found-v2">Exemption found and matched - PCN closed [V.2]</a></td>
+            <td>Info in grey highlight box with 'Send me an email confirmation' link. With clearer content</td>
+         </tr>
+      </tbody>
+   </table>
+</main>
+{% endblock %}
+
+
+
+
+
+
+
+
