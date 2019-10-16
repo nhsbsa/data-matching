@@ -1,88 +1,95 @@
 {% extends "layout_bsa.html" %}
-
 {% block page_title %}
-  Challenge a Penalty Charge Notice
+NHS Data Matching
 {% endblock %}
-
 {% block content %}
-
 <main id="content" role="main">
-  
-    <div class="grid-row">
-    <div class="column-full">
-      <div class="phase-banner">
-          <p>
-            <strong class="phase-tag">BETA</strong>
-            <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-          </p>
-        </div>
-                 <a class="link-back" href="">Back</a>
-
-    </div>
-  </div>
-
-    
-  <div class="grid-row">
-    
-    <div class="column-two-thirds">
-    
-      <div class="heading-group">
-            <p>Tell us your details</p>
-        <h1 class="heading-large">Tell us your up to date details</h1>
+   <div class="grid-row">
+      <div class="column-full">
+         <div class="phase-banner">
+            <p>
+               <strong class="phase-tag">BETA</strong>
+               <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+            </p>
+         </div>
+         <a class="link-back" href="">Back</a>
       </div>
-            
-      
+   </div>
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <div class="heading-group">
+            <p>Update your details on your NHS exemption</p>
+            <h1 class="heading-large">Your up-to-date details</h1>
+         </div>
+         <h2 class="heading-medium">What is your name?</h2>
+         <form action="thank-you" method="get" class="form">
+            <div class="form-group">
+               <label class="form-label" for="firstname">
+               First name (forename)
+               </label>
+               <input class="form-control" id="pcnnumber" name="pcnnumber" type="text">
+            </div>
+            <div class="form-group">
+               <label class="form-label" for="middlenames">
+               Last name (surname)
+               </label>
+               <input class="form-control" id="middlenames" name="middlenames" type="text">
+            </div>
+         </form>
+         <h2 class="heading-medium">What is your date of birth?</h2>
+         <form action="thank-you" method="get" class="form">
+            <div class="form-group">
+               <div class="form-date">
+                  <div class="form-group form-group-day">
+                     <label for="futureday">Day</label>
+                     <input class="form-control" id="futureday" name="future_day" type="number" pattern="[0-9]*" min="0" max="31" >
+                  </div>
+                  <div class="form-group form-group-month">
+                     <label for="futuremonth">Month</label>
+                     <input class="form-control" id="futuremonth" name="future_month" type="number" pattern="[0-9]*" min="0" max="12">
+                  </div>
+                  <div class="form-group form-group-year">
+                     <label for="futureyear">Year</label>
+                     <input class="form-control" id="futureyear" name="future_year" type="number" pattern="[0-9]*" min="0" max="2019">
+                  </div>
+               </div>
+            </div>
+          </form>
 
-      
-      <form action="thank-you" method="get" class="form">
-
-        <div class="form-group">
-<!--
-          <label class="form-hint" for="firstname">
-            For example: 959385732
-          </label>
--->
-          <input class="form-control" id="pcnnumber" name="pcnnumber" type="text">
-        </div>
-        
-
-        <div class="form-group">
-          <label class="form-label" for="middlenames">
-            Middle names (optional)
-          </label>
-          <input class="form-control" id="middlenames" name="middlenames" type="text">
-        </div>
-
-
-<!--
-        <div class="form-group">
-          <label class="form-label" for="lastname">
-            Last name
-          </label>
-          <input class="form-control" id="lastname" name="lastname" type="text">
-        </div>
--->
-        
-        <div>
-
-        <p><a href="personal">I do not have a Tax Credit reference number</a></p>
-
-        </div>
-        <br>
-        
-        <div class="form-item-wrapper">
-          <div class="form-group">
-            <input class="button" type="submit" value="Next">
-          </div>
-        </div>
-
-        <p class="navigation"><a class="cancel" href="start">Cancel</a></p>
-        
-      </form>
-    </div>
-    
-  </div>
-  
+          <h2 class="heading-medium">What is your address?</h2>
+         <form action="thank-you" method="get" class="form">
+            <div class="form-group">
+               <label class="form-label" for="firstname">
+               Address
+               </label>
+               <input class="form-control" id="pcnnumber" name="pcnnumber" type="text">
+             </div>
+             <div class="form-group">
+               <input class="form-control" id="pcnnumber" name="pcnnumber" type="text">
+             </div>
+             <div class="form-group">
+               <input class="form-control" id="pcnnumber" name="pcnnumber" type="text">
+            </div>
+            <div class="form-group">
+               <input class="form-control" id="pcnnumber" name="pcnnumber" type="text">
+            </div>
+            <div class="form-group">
+               <label class="form-label" for="postcode">
+               Postcode
+               </label>
+               <input class="form-control" style="width: 30%;" id="postcode" name="postcode" type="text">
+            </div>
+         </form>
+         <form action="thankyou" method="get" class="form">
+            <div class="form-item-wrapper">
+               <div class="form-group">
+                  <input class="button" type="submit" value="Submit">
+               </div>
+            </div>
+          </form>
+            <p class="navigation"><a class="cancel" href="start">Cancel</a></p>
+         </form>
+      </div>
+   </div>
 </main>
-
 {% endblock %}

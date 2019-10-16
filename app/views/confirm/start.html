@@ -1,0 +1,51 @@
+{% extends "layout_bsa.html" %}
+{% block page_title %}
+NHS Data Matching
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+   <div class="grid-row">
+      <div class="column-full">
+         <div class="phase-banner">
+            <p>
+               <strong class="phase-tag">BETA</strong>
+               <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+            </p>
+         </div>
+      </div>
+   </div>
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <div class="heading-group">
+            <h1 class="heading-xlarge">Update your details on your NHS exemption</h1>
+         </div>
+      </div>
+      <div class="column-two-thirds">
+         <div class="text">
+            <p>
+               Use this service to:
+            </p>
+            <ul class="list list-bullet">
+               <li>tell us your NHS number</li>
+               <li>tell us about any changes to your personal details</li>
+            </ul>
+         </div>
+         <p>
+            This should take less than 5 minutes.
+         </p>
+         <br>
+         <form action="invitation" method="get" class="form">
+            <div class="form-item-wrapper">
+               <div class="form-group">
+                  <input class="button button-get-started" type="submit" value="Start">
+               </div>
+            </div>
+         </form>
+         <div>
+            <h2 class="heading-small">How we use your information</h2>
+            <p>We use the information you provide to help us match your details. You can find out more about <a href="https://www.nhsbsa.nhs.uk/nhs-prescription-services-privacy-notice" target="_blank">how we use your information</a>
+         </div>
+      </div>
+   </div>
+</main>
+{% endblock %}

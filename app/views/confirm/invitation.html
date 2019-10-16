@@ -1,0 +1,45 @@
+{% extends "layout_bsa.html" %}
+{% block page_title %}
+Data Matching
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+   <div class="grid-row">
+      <div class="column-full">
+         <div class="phase-banner">
+            <p>
+               <strong class="phase-tag">BETA</strong>
+               <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+            </p>
+         </div>
+            <a class="link-back" href="">Back</a>
+      </div>
+   </div>
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <div class="heading-group">
+            <p>Update your details on your NHS exemption</p>
+            <h1 class="heading-large">Enter your invitation code</h1>
+         </div>
+         <p>Your invitation code is a X-digit number printed on your letter.</p>
+         <form action="thank-you" method="get" class="form">
+            <div class="form-group">
+               <label class="form-label" for="firstname">
+               Invitation code
+               </label>
+               <input class="form-control" id="pcnnumber" name="pcnnumber" type="text">
+            </div>
+         </form>
+         <form action="nhs-number" method="get" class="form">
+            <div class="form-item-wrapper">
+               <div class="form-group">
+                  <input class="button" type="submit" value="Next">
+               </div>
+            </div>
+         </form>
+         <p class="navigation"><a class="cancel" href="start">Cancel</a></p>
+         </form>
+      </div>
+   </div>
+</main>
+{% endblock %}
