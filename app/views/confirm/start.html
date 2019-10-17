@@ -17,7 +17,7 @@ NHS Data Matching
    <div class="grid-row">
       <div class="column-two-thirds">
          <div class="heading-group">
-            <h1 class="heading-xlarge">Update your details on your NHS exemption</h1>
+            <h1 class="heading-xlarge">Make sure your details are up to date</h1>
          </div>
       </div>
       <div class="column-two-thirds">
@@ -31,10 +31,23 @@ NHS Data Matching
             </ul>
          </div>
          <p>
-            This should take less than 5 minutes.
+            This service contains 4 questions. It should take less than 5 minutes to complete.
          </p>
-         <br>
-         <form action="invitation" method="get" class="form">
+                 <h2 class="heading-small">Invitation code</h2>
+
+
+         <p>You need to enter your invitation code. Your invitation code is the X-digit number on the letter or email we sent to you.</p>
+         <form action="thank-you" method="get" class="form">
+            <div class="form-group">
+               <label class="form-label" for="firstname">
+               Invitation code
+               </label>
+               <input class="form-control" id="pcnnumber" name="pcnnumber" type="text">
+            </div>
+         </form>
+
+
+         <form action="nhs-number" method="get" class="form">
             <div class="form-item-wrapper">
                <div class="form-group">
                   <input class="button button-get-started" type="submit" value="Start">
