@@ -19,7 +19,7 @@ NHS Data Matching
       <div class="column-third right-floater">
          <div class="payment-summary-small">
             <h2>Why do we ask this?</h2>
-            <p>NHS Numbers are sometimes omitted from exemptions. It helps healthcare staff and service providers identify you correctly and match your details to your health records.</p>
+            <p>We currently do not hold your NHS Number. Your NHS Number helps healthcare staff and service providers identify you correctly and match your details to your health records.</p>
          </div>
       </div>
       <div class="column-two-thirds">
@@ -29,7 +29,7 @@ NHS Data Matching
                Do you know your NHS Number?
             </h1>
          </div>
-         <p>If you're registered with a GP, you will have a 10 digit NHS Number unique to you. It is usually on any letter or document you have received from the NHS, such as:</p>
+         <p>If you're registered with a GP, you'll have a 10-digit NHS Number unique to you. It is usually on any letter or document you have received from the NHS, such as:</p>
          <div class="form-group">
             <details>
                <summary><span class="summary">prescriptions</span></summary>
@@ -69,13 +69,18 @@ NHS Data Matching
                      <input id="yes" type="radio" name="hasnhsno" value="Yes">
                      <label for="yes">Yes</label>
                   </div>
-                  <div class="multiple-choice">
+                  <div class="multiple-choice" data-target="nonhsno">
                      <input id="no" type="radio" name="hasnhsno" value="No">
                      <label for="no">No</label>
                   </div>
                   <div class="panel panel-border-narrow js-hidden" id="getnhsno">
                      <label class="form-label" for="nhsno">NHS Number</label>
                      <input class="form-control" name="nhsno" type="nhsno" id="nhsno">
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="nonhsno">
+                     <p>You can still continue to update your personal details.</p>
+                     <!-- <label class="form-label" for="nhsno">NHS Number hvjfjfjy</label>
+                     <input class="form-control" name="nhsno" type="nhsno" id="nhsno"> -->
                   </div>
                </fieldset>
             </div>
